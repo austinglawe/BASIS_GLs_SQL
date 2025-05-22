@@ -1,0 +1,53 @@
+Create a table to hold all the other GL tables.
+CREATE TABLE GL_All (
+    Account INTEGER,
+    Posted_dt TEXT,
+    Posted_date TEXT,
+    Doc_dt TEXT,
+    Doc_date TEXT,
+    Doc TEXT,
+    Memo TEXT,
+    Vendor_name TEXT,
+    Division_name TEXT,
+    Division INTEGER,
+    Location_name TEXT,
+    Location INTEGER,
+    Project_name TEXT,
+    Project TEXT,
+    Customer_name TEXT,
+    Customer TEXT,
+    Vendor TEXT,
+    Employee_name TEXT,
+    Employee TEXT,
+    Item_name TEXT,
+    Item TEXT,
+    Debt_Services_Series_name TEXT,
+    Debt_Services_Series TEXT,
+    Funding_Source TEXT,
+    Txn_No INTEGER,
+    JNL TEXT,
+    Debit REAL,
+    Credit REAL,
+    Amount REAL
+);
+
+Add All of the Tables into one table called 'GL_all'
+INSERT INTO GL_all SELECT * FROM GL_01;
+INSERT INTO GL_all SELECT * FROM GL_02;
+INSERT INTO GL_all SELECT * FROM GL_03;
+INSERT INTO GL_all SELECT * FROM GL_04;
+INSERT INTO GL_all SELECT * FROM GL_05;
+INSERT INTO GL_all SELECT * FROM GL_06;
+INSERT INTO GL_all SELECT * FROM GL_07;
+INSERT INTO GL_all SELECT * FROM GL_08;
+INSERT INTO GL_all SELECT * FROM GL_09;
+INSERT INTO GL_all SELECT * FROM GL_10;
+INSERT INTO GL_all SELECT * FROM GL_11;
+INSERT INTO GL_all SELECT * FROM GL_12;
+INSERT INTO GL_all SELECT * FROM GL_13;
+INSERT INTO GL_all SELECT * FROM GL_14;
+INSERT INTO GL_all SELECT * FROM GL_15;
+INSERT INTO GL_all SELECT * FROM GL_16;
+INSERT INTO GL_all SELECT * FROM GL_17;
+INSERT INTO GL_all SELECT * FROM GL_18;
+INSERT INTO GL_all SELECT * FROM GL_19;
