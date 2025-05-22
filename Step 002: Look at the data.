@@ -1,0 +1,50 @@
+SELECT * FROM GL_all;
+
+How many total rows are there?
+16,679,174 rows Returned
+
+What are the unique 'Accounts' and how many transactions of each Account are there?
+SELECT Account, COUNT(*) AS count
+FROM GL_All
+GROUP BY Account
+ORDER BY count DESC;
+
+What is the first 'Posted_date' for each Account and what is the last?
+SELECT
+  Account,
+  MIN(Posted_date) AS Start_date,
+  MAX(Posted_date) AS End_date
+FROM GL_All
+GROUP BY Account
+ORDER BY Account;
+
+How many transactions have there been for each school ('Location') ?
+SELECT Location_name, location, COUNT(*) AS count
+FROM GL_All
+GROUP BY location
+ORDER BY count DESC;
+
+What was the first 'Posted_date' for each School ('Location') and what is the last?
+SELECT
+  Location_name, 
+  Location,
+  MIN(Posted_date) AS Start_date,
+  MAX(Posted_date) AS End_date
+FROM GL_All
+GROUP BY Location
+ORDER BY Location;
+
+How many transactions have there been for each Journal ('JNL')?
+SELECT JNL, COUNT(*) AS count
+FROM GL_All
+GROUP BY JNL
+ORDER BY count DESC;
+
+What was the first 'Posted_date' for each Journal ('JNL') and what is the last?
+SELECT
+  JNL,
+  MIN(Posted_date) AS Start_date,
+  MAX(Posted_date) AS End_date
+FROM GL_All
+GROUP BY JNL
+ORDER BY JNL;
