@@ -62,4 +62,40 @@ WHERE Memo LIKE '%PMT-%'
 GROUP BY Account
 ORDER BY Count DESC;
 
+For Export file:
+SELECT
+  Account,
+  Posted_dt,
+  Posted_date,
+  Doc_dt,
+  Doc_date,
+  REPLACE(Doc, ',', '|||||') AS Doc,
+  REPLACE(Memo, ',', '|||||') AS Memo,
+  REPLACE(Vendor_name, ',', '|||||') AS Vendor_name,
+  REPLACE(Division_name, ',', '|||||') AS Division_name,
+  REPLACE(Division, ',', '|||||') AS Division,
+  REPLACE(Location_name, ',', '|||||') AS Location_name,
+  REPLACE(Location, ',', '|||||') AS Location,
+  REPLACE(Project_name, ',', '|||||') AS Project_name,
+  REPLACE(Project, ',', '|||||') AS Project,
+  REPLACE(Customer_name, ',', '|||||') AS Customer_name,
+  REPLACE(Customer, ',', '|||||') AS Customer,
+  REPLACE(Vendor, ',', '|||||') AS Vendor,
+  REPLACE(Employee_name, ',', '|||||') AS Employee_name,
+  REPLACE(Employee, ',', '|||||') AS Employee,
+  REPLACE(Item_name, ',', '|||||') AS Item_name,
+  REPLACE(Item, ',', '|||||') AS Item,
+  REPLACE(Debt_Services_Series_name, ',', '|||||') AS Debt_Services_Series_name,
+  REPLACE(Debt_Services_Series, ',', '|||||') AS Debt_Services_Series,
+  REPLACE(Funding_Source, ',', '|||||') AS Funding_Source,
+  REPLACE(Txn_No, ',', '|||||') AS Txn_No,
+  REPLACE(JNL, ',', '|||||') AS JNL,
+  REPLACE(Debit, ',', '|||||') AS Debit,
+  REPLACE(Credit, ',', '|||||') AS Credit,
+  REPLACE(Amount, ',', '|||||') AS Amount
+FROM GL_All
+WHERE Memo LIKE '%PMT-%'
+ORDER BY Account, Posted_date;
+
+
 
