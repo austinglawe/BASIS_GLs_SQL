@@ -52,7 +52,8 @@ ORDER BY JNL;
 Which transactions contain "PMT-" - a precursor to the Salesforce "PMT-[ID]" in the memo?
 SELECT *
 FROM GL_All
-WHERE Memo LIKE '%PMT-%';
+WHERE Memo LIKE '%PMT-%'
+ORDER BY Account, Posted_date;
 
 Which accounts contain "PMT-"- a precursor to the Salesforce "PMT-[ID]" in the memo and how many of each are there in each of those accounts?
 SELECT Account, COUNT(*) As Count
