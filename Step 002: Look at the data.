@@ -48,3 +48,8 @@ SELECT
 FROM GL_All
 GROUP BY JNL
 ORDER BY JNL;
+
+Which transactions contain "PMT-" - a precursor to the Salesforce "PMT-[ID]"?
+SELECT *
+FROM GL_All
+WHERE Memo LIKE '%PMT-%';
